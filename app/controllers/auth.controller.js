@@ -99,7 +99,7 @@ exports.signin = (req, res) => {
       }
 
       const token = jwt.sign({ id: user.id },
-                              process.env.JWT_SECRET_KEY,
+                              config.secret,
                               {
                                 algorithm: 'HS256',
                                 allowInsecureKeySizes: true,
