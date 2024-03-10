@@ -23,7 +23,7 @@ const verifyToken = asyncHandler(async (req, res, next) => {
   }
 
   jwt.verify(token,
-            process.env.JWT_SECRET_KEY,
+            config.secret,
             (err, decoded) => {
               if (err) {
                 return res.status(401).send({
