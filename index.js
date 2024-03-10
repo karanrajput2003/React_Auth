@@ -25,7 +25,7 @@ const Role = db.role;
 // mongoose.connect("mongodb+srv://karan_admin:Kar2003@cluster0.oq0g1g1.mongodb.net/userDB", {useNewUrlParser: true});
 
 db.mongoose
-  .connect(`mongodb+srv://karan_admin:${process.env.MONGO_PASSWORD}@cluster0.oq0g1g1.mongodb.net/${dbConfig.DB}`, {
+  .connect(`mongodb+srv://karan_admin:Kar2003@cluster0.oq0g1g1.mongodb.net/${dbConfig.DB}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
