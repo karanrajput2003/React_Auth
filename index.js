@@ -8,7 +8,7 @@ const app = express();
 
 var corsOptions = {
   credentials: true,
-  origin: "http://localhost:5173"
+  origin: "https://auth-frontend-rust.vercel.app"
 };
 
 app.use(cors(corsOptions));
