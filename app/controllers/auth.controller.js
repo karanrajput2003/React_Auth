@@ -112,8 +112,7 @@ exports.signin = (req, res) => {
         authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
       }
       res.cookie(String(user._id), token,{
-        
-        domain: 'acme.com',
+        path: '/',
         expires: 15*24*60*60*1000),
         httpOnly: true,
         sameSite: 'Strict',
