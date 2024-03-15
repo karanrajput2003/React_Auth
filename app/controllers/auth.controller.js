@@ -115,7 +115,7 @@ exports.signin = (req, res) => {
         path: '/',
         expires: new Date(Date.now() + 1000 *60*60),
         httpOnly: true,
-        sameSite: "None"
+        sameSite: 'Strict'
     });
       res.status(200).json({
         id: user._id,
