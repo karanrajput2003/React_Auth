@@ -112,10 +112,12 @@ exports.signin = (req, res) => {
         authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
       }
       res.cookie(String(user._id), token,{
-        path: '/',
-        expires: new Date(Date.now() + 1000 *60*60),
+        
+        domain: 'acme.com',
+        expires: 15*24*60*60*1000),
         httpOnly: true,
-        sameSite: 'Strict'
+        sameSite: 'Strict',
+        secure: true
     });
       res.status(200).json({
         id: user._id,
