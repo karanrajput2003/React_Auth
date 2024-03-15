@@ -113,10 +113,9 @@ exports.signin = (req, res) => {
       }
       res.cookie(String(user._id), token,{
         path: '/',
-        expires: 15*24*60*60*1000),
+        expires: 15*24*60*60*1000,
         httpOnly: true,
-        sameSite: 'Strict',
-        secure: true
+        sameSite: 'Strict'
     });
       res.status(200).json({
         id: user._id,
